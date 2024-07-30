@@ -71,27 +71,13 @@ To train the model, follow these steps:
 ## Evaluation
 Evaluate the model on the validation set to check its performance.
 
-```python
-# (Insert code for evaluating the model)
-```
-
 ## Prediction
 Use the trained model to make predictions on the test set and create a submission file.
 
-```python
-# Load the test data
-test_df = pd.read_csv('/content/drive/My Drive/path_to_your_test_data.csv')
-
-# Tokenize the test data
-test_encodings = tokenizer(test_df['short_description'].tolist(), truncation=True, padding=True, max_length=512, return_tensors='pt')
-
-# Move the model to the GPU if available
-device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-model.to(device)
 
 ![Alt Text](https://github.com/user-attachments/assets/76e52843-1d68-42ce-a408-cf42e76be071)
 
-# Make predictions
+## Make predictions
 
 
 ## Deployment
@@ -112,7 +98,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
+
 
 
 
