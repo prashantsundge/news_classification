@@ -1,6 +1,4 @@
-Sure, here's a detailed `README.md` file for your news classification project:
 
-```markdown
 # News Classification Project
 
 This project focuses on building a text classification model to categorize news articles into various categories based on headlines and short descriptions. The project leverages the BERT model for text embeddings and classification, and it is deployed using Google Colab and Streamlit on Google Cloud Platform (GCP).
