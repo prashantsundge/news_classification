@@ -32,6 +32,7 @@ The dataset used in this project consists of news articles with the following co
 
 ## Model
 We use the BERT model for text classification. BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model designed to pre-train deep bidirectional representations by jointly conditioning on both left and right context in all layers.
+
 ![Alt Text](https://github.com/user-attachments/assets/02888063-e095-433e-bb45-9902c98aab9f)
 
 ## Setup
@@ -66,23 +67,6 @@ To train the model, follow these steps:
 3. Split the data into training and validation sets.
 4. Train the BERT model on the training set.
 
-```python
-import torch
-from transformers import BertTokenizer, BertForSequenceClassification
-import pandas as pd
-
-# Load the dataset
-df = pd.read_csv('path_to_your_data.csv')
-
-# Preprocess the data
-# (Insert preprocessing steps here)
-
-# Tokenize the data
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-encodings = tokenizer(df['short_description'].tolist(), truncation=True, padding=True, max_length=512, return_tensors='pt')
-
-# (Insert code for splitting data and training the model)
-```
 
 ## Evaluation
 Evaluate the model on the validation set to check its performance.
@@ -105,27 +89,10 @@ test_encodings = tokenizer(test_df['short_description'].tolist(), truncation=Tru
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 model.to(device)
 
+![Alt Text](https://github.com/user-attachments/assets/76e52843-1d68-42ce-a408-cf42e76be071)
+
 # Make predictions
-model.eval()
-with torch.no_grad():
-    input_ids = test_encodings['input_ids'].to(device)
-    attention_mask = test_encodings['attention_mask'].to(device)
-    
-    outputs = model(input_ids, attention_mask=attention_mask)
-    predictions = torch.argmax(outputs.logits, dim=-1)
 
-# Convert predictions to a list
-predicted_labels = predictions.cpu().numpy().tolist()
-
-# Add predictions to the test DataFrame
-test_df['predicted_category'] = predicted_labels
-
-# Rename the 'predicted_category' column to 'category'
-submission_df = test_df[['REF_NO', 'predicted_category']].rename(columns={'predicted_category': 'category'})
-
-# Save the submission file
-submission_df.to_csv('/content/drive/My Drive/submission.csv', index=False, header=False)
-```
 
 ## Deployment
 Deploy the model using Streamlit on Google Cloud Platform (GCP).
@@ -133,9 +100,6 @@ Deploy the model using Streamlit on Google Cloud Platform (GCP).
 1. Create a Streamlit app for real-time predictions.
 2. Deploy the app on GCP.
 
-```python
-# (Insert Streamlit app code here)
-```
 
 ## Results
 The model achieved an accuracy of XX% on the validation set and XX% on the test set.
