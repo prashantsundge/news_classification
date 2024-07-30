@@ -21,7 +21,7 @@ The aim of this project is to classify news articles into predefined categories.
 
 ## Google Drive Mount
 
-![Alt Text][image](https://github.com/user-attachments/assets/de36af7a-8155-43ba-8cbb-7280cd40a1d8)
+![Alt Text](https://github.com/user-attachments/assets/de36af7a-8155-43ba-8cbb-7280cd40a1d8)
 
 
 ## Dataset
