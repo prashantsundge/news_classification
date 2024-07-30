@@ -32,6 +32,7 @@ The dataset used in this project consists of news articles with the following co
 
 ## Model
 We use the BERT model for text classification. BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model designed to pre-train deep bidirectional representations by jointly conditioning on both left and right context in all layers.
+![Alt Text](https://github.com/user-attachments/assets/02888063-e095-433e-bb45-9902c98aab9f)
 
 ## Setup
 To set up the project, follow these steps:
