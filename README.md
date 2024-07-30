@@ -19,6 +19,11 @@ This project focuses on building a text classification model to categorize news 
 ## Overview
 The aim of this project is to classify news articles into predefined categories. The project includes data preprocessing, model training, evaluation, and deployment.
 
+## Google Drive Mount
+
+![Alt Text][image](https://github.com/user-attachments/assets/de36af7a-8155-43ba-8cbb-7280cd40a1d8)
+
+
 ## Dataset
 The dataset used in this project consists of news articles with the following columns:
 - `REF_NO`: Reference number of the article
