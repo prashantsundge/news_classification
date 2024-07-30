@@ -134,6 +134,9 @@ Deploy the model using Streamlit on Google Cloud Platform (GCP).
 ## Results
 The model achieved an accuracy of XX% on the validation set and XX% on the test set.
 
+![Alt Text](https://github.com/user-attachments/assets/1a6bc06b-ab7b-47f2-9507-7cfa1e889a0f)
+
+
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
 
@@ -144,4 +147,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 
-![image](https://github.com/user-attachments/assets/1a6bc06b-ab7b-47f2-9507-7cfa1e889a0f)
+
